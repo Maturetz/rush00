@@ -6,11 +6,10 @@
 /*   By: maturetz <maturetz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 22:44:35 by maturetz          #+#    #+#             */
-/*   Updated: 2024/07/06 18:51:44 by maturetz         ###   ########.fr       */
+/*   Updated: 2024/07/06 18:56:49 by maturetz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_error(int e);
 void	rush(int x, int y);
 
 int	ft_nbr_check(int x, int y)
@@ -32,6 +31,16 @@ int	ft_nbr_check(int x, int y)
 	}
 	else
 		return (1);
+}
+
+void	ft_error(int e)
+{
+	if (e == -2)
+		write (1, "Error y value <= 0\n", 19);
+	if (e == -1)
+		write (1, "Error x value <= 0\n", 19);
+	if (e == 0)
+		write (1, "Error Value entered for x and x <= 0\n", 38);
 }
 
 int	main(void)
